@@ -30,13 +30,13 @@ public class PostController {
     }
 
     @CrossOrigin(origins = "*")
-    @PutMapping("/Posts")
+    @PutMapping("/Posts/{id}")
     public HashMap<Integer,Posts> updatePost(@PathVariable int id, @RequestBody Posts postUpdate){
         return this.postServ.updatePost(id, postUpdate);
     }
 
     @CrossOrigin(origins = "*")
-    @DeleteMapping("/Posts")
+    @DeleteMapping("/Posts/{id}")
     public HashMap<Integer,Posts> deletePost(@PathVariable int id){
         return this.postServ.deletePost(id);
     }

@@ -32,13 +32,13 @@ public class UserController{
     }
 
     @CrossOrigin(origins = "*")
-    @PutMapping("/Users")
+    @PutMapping("/Users/{id}")
     public HashMap<Integer,Users> updateUser(@PathVariable int id, @RequestBody Users userUpdate){
         return this.userService.updateUser(id, userUpdate);
     }
 
     @CrossOrigin(origins = "*")
-    @DeleteMapping("/Users")
+    @DeleteMapping("/Users/{id}")
     public HashMap<Integer,Users> deleteUser(@PathVariable int id){
         return this.userService.deleteUser(id);
     }

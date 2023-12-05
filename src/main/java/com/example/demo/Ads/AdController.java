@@ -32,13 +32,13 @@ public class AdController {
     }
 
     @CrossOrigin(origins = "*")
-    @PutMapping("/Ads")
+    @PutMapping("/Ads/{id}")
     public HashMap<Integer,Ads> updateAd(@PathVariable int id, @RequestBody Ads adUpdate){ 
         return this.adService.updateAd(id, adUpdate);
     }
 
     @CrossOrigin(origins = "*")
-    @DeleteMapping("/Ads")
+    @DeleteMapping("/Ads/{id}")
     public HashMap<Integer,Ads> deleteAd(@PathVariable int id){
         return this.adService.deleteAd(id);
     }

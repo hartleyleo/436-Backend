@@ -30,13 +30,13 @@ public class CommentController {
     }
 
     @CrossOrigin(origins = "*")
-    @PutMapping("/Comments")
+    @PutMapping("/Comments/{id}")
     public HashMap<Integer,Comments> updateComment(@PathVariable int id, @RequestBody Comments commentUpdate){
         return this.commentServ.updateComment(id, commentUpdate);
     }
 
     @CrossOrigin(origins = "*")
-    @DeleteMapping("/Comments")
+    @DeleteMapping("/Comments/{id}")
     public HashMap<Integer,Comments> deleteComment(@PathVariable int id){
         return this.commentServ.deleteComment(id);
     }

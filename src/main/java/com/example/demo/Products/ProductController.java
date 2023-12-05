@@ -33,13 +33,13 @@ public class ProductController {
     }
 
     @CrossOrigin(origins = "*")
-    @PutMapping("/Products")
+    @PutMapping("/Products/{id}")
     public HashMap<Integer,Products> updateProduct(@PathVariable int id, @RequestBody Products productUpdate){
         return this.productServ.updateProduct(id, productUpdate);
     }
 
     @CrossOrigin(origins = "*")
-    @DeleteMapping("/Products")
+    @DeleteMapping("/Products/{id}")
     public HashMap<Integer,Products> deleteProduct(@PathVariable int id){
         return this.productServ.deleteProduct(id);
     }
